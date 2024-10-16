@@ -1,0 +1,7 @@
+#define BLYNK_TEMPLATE_ID "TMPL3c_S4-Xk5"
+#define BLYNK_TEMPLATE_NAME "mini"
+#define BLYNK_AUTH_TOKEN "jKUTsnF2ztJcf5-MnmdptrQug98_eBW2"
+jKUTsnF2ztJcf5-MnmdptrQug98_eBW2
+
+#define BLYNK_TEMPLATE_ID "TMPL3c_S4-Xk5"
+#define BLYNK_TEMPLATE_NAME "mini"

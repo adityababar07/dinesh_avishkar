@@ -1,10 +1,14 @@
 from flask import Flask, render_template, jsonify, request
 import socket
+import os
 
 app = Flask(__name__)
 
+port = int(os.environ.get("PORT", 5001))
+app.run(debug=True, port=port, host="0.0.0.0", use_reloader=False)
+
 # TCP server details
-TCP_IP = '192.168.101.98' 
+TCP_IP = '192.168.138.98' 
 TCP_PORT = 40674  
 
 
@@ -29,9 +33,9 @@ def index():
 def toggle():
     state = request.json['state']
     if state:
-        send_tcp_message("Switch ON")
+        send_tcp_message("Switch on")
     else:
-        send_tcp_message("Switch OFF")
+        send_tcp_message("Switch off")
     return jsonify({"status": "Message sent"})
 
 if __name__ == '__main__':

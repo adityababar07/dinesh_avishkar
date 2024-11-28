@@ -5,12 +5,8 @@ import os
 app = Flask(__name__)
 
 # TCP server details
-TCP_IP = '192.168.225.110' 
+TCP_IP = '192.168.224.98' 
 TCP_PORT = 40674  
-
-s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-
-s.connect((TCP_IP, TCP_PORT))
 
 port = int(os.environ.get("PORT", 5001))
 
@@ -41,6 +37,4 @@ def toggle():
     return jsonify({"status": "Message sent"})
 
 if __name__ == '__main__':
-    print(app.url_map)
-
     app.run(debug=True, port=port, host="0.0.0.0", use_reloader=False)
